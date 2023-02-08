@@ -1,0 +1,112 @@
+$background: #F8F8F8;
+$borderOpacity: #b8ffec00;
+$borderNotOpacity: #b8ffec;
+$footerColor: #7E7E82;
+$blockColor: #FFFFFF;
+
+.slide-menu {
+    max-width: 1120px;
+    margin-left: 320px;
+    scrollbar-width: none;
+    max-width: 1120px;
+    padding-left: 32px;
+    background-color: $background;
+    &::-ms-scrollbar {
+        width: 0;
+    }
+    &::-o-scrollbar {
+        width: 0;
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    &::-moz-scrollbar {
+        width: 0;
+    }
+}
+.slide-menu__nav {
+    display: flex;
+    padding-top: 17px;
+    overflow: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    &::-o-scrollbar {
+        width: 0;
+    }
+    &::-moz-scrollbar {
+        width: 0;
+    }
+    &::-ms-scrollbar {
+        width: 0;
+    }
+}
+
+.slide-menu__link {
+    padding: 0.5em 1.1em;
+    border: $borderOpacity 2px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .15s ease-in-out, border .15s ease-in-out;
+    color: $footerColor;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    &:hover {
+        border: $borderNotOpacity 2px solid;
+        background: $blockColor;
+    }
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.reviews {
+    width: 100px;
+    margin-top: 11px;
+}
+
+@media (max-width: 767px) {
+    .slide-menu {
+        padding-left: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: auto;
+        margin-left: 0;
+    }
+    .slide-menu__nav {
+        overflow: visible;
+        justify-content: left;
+        margin-top: 24px;
+    }
+    .reviews {
+        margin: 0;
+        display: flex;
+        padding: 0.5em 1.1em;
+        margin-top: 43px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1119px) {
+    .slide-menu {
+        padding-left: 24px;
+        display: flex;
+        align-items: center;
+        overflow: auto;
+        margin: 0;
+    }
+    .slide-menu__nav {
+        overflow: visible;
+        justify-content: left;
+        margin-top: 24px;
+    }
+    .reviews {
+        margin: 0;
+        display: flex;
+        padding: 0.5em 1.1em;
+        margin-top: 43px;
+    }
+}

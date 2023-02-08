@@ -1,0 +1,112 @@
+$background: #F8F8F8;
+$navColor: #1B1C21;
+
+.section {
+    display: flex;
+    justify-content: center;
+    padding-top: 19px;
+    margin-left: 320px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: $background;
+}
+.section__img {
+    max-width: 530px;
+    width: 33.2vw;
+    border-radius: 6px;
+}
+.section__expand {
+    position: relative;
+    display: flex;
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $navColor;
+    border: none;
+    background: inherit;
+    cursor: pointer;
+    &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        margin-right: 8px;
+        background-image: url(../img/section-content/arr.svg);
+    }
+}
+.section__content {
+    letter-spacing: 0.2px;
+    width: 490px;
+    margin-right: 36px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 10px;
+    font-family: TT Lakes;
+    font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-left: 0;
+        padding: 0;
+    }
+    .section__img {
+        height: 100%;
+        width: 100vw;
+        border-radius: 0;
+        margin-top: 16px;
+        margin: 0 auto;
+    }
+    .section__content {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        line-height: 18px;
+        width: 100vw;
+        padding-bottom: 30px;
+    }
+    .section__text {
+        display: block;
+        overflow: hidden;
+        height: 90px;
+    }
+    .section__text-more {
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1119px) {
+    .section {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 60px;
+    }
+    .section__content {
+        padding-top: 0;
+        height: 146px;
+    }
+    .section__text {
+        padding-top: 5px;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
+    .section__expand {
+        margin-top: 10px;
+    }
+    .section__img {
+        width: 50vw;
+    }
+    .section__text-more {
+        height: 100%;
+    }
+}

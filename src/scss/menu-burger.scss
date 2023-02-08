@@ -1,0 +1,206 @@
+$blockColor: #FFFFFF;
+$borderColor: #D9FFF5;
+$logoFill: #6B7B84;
+$navColor: #1B1C21;
+$footerColor: #7E7E82;
+$beforeTitle: #41F6D7;
+$boxShadow: #0E1850;
+
+
+.menu-burger {
+    position: fixed;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    padding-left: 24px;
+    padding-right: 30px;
+    background: $blockColor;
+    line-height: 24px;
+    border-right: solid 1px $borderColor;
+    border-left: solid 1px $borderColor;
+}
+.ic {
+    width: 40px;
+    height: 40px;
+    
+}
+.logo {
+    width: 96.55px;
+    height: 50.81px;
+    fill: $logoFill;
+    background-image: url(../img/menu-burger/logo.svg)
+}
+.ic-burger-off {
+    display: none;
+    background-image: url(../img/menu-burger/burger-off.svg);
+}
+.ic-search {
+    background-image: url(../img/menu-burger/search.svg);
+}
+.ic-call {
+    background-image: url(../img/menu-burger/call.svg);
+}
+.ic-chat {
+    background-image: url(../img/menu-burger/chat.svg);
+}
+.ic-profile {
+    background-image: url(../img/menu-burger/profile.svg);
+}
+.menu-burger__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+    padding-bottom: 56px;
+}
+.menu-burger__right-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-burger__left-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-section {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-section__nav {
+    color: $navColor;
+    font-family: TT Lakes;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s linear;
+    letter-spacing: -0.2px;
+    &:active, &:hover {
+        color: $footerColor;
+    }
+    &:active::before, &:hover::before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 32px;
+        background: $beforeTitle;
+        border-radius: 4px;
+        top: -6px;
+        left: -24px;
+    }
+}
+
+
+.menu-section__footer {
+    position: absolute;
+    bottom: 32px;
+    left: 24px;
+}
+.ic-bar {
+    display: flex;
+}
+.ic_right {
+    margin-right: 16px;
+}
+.adress {
+    margin-top: 16px;
+}
+.adress-number {
+    margin-top: 12px;
+    font-family: TT Lakes;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+}
+.adress-mail {
+    letter-spacing: -0.2px;
+}
+.adress-link {
+    text-decoration: none;
+    color: inherit;
+}
+.footer-languages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+.footer-lang {
+    display: inline-block;
+    margin-right: 7px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    letter-spacing: -0.2px;
+    &:active {
+        color: $footerColor;
+    }
+}
+
+
+/* <768px */
+@media (max-width: 767px) {
+    .menu-burger {
+        opacity: 0;
+        transform: translateX(-320px);
+        transition: all 0.2s linear;
+    }
+    .footer-languages {
+        margin-top: 8px;
+    }
+    .menu-section__nav {
+        margin-bottom: 24px;
+        &:active::before, &:hover::before {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+    .menu-burger__header {
+        padding-bottom: 32px;
+    }
+    .ic-burger-off_display {
+        display: block;
+    }
+    .menu-burger-mobile {
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 100;
+        width: 100%;
+    }
+
+}
+/* 768-1120 */
+@media (min-width: 768px) and (max-width: 1119px) {
+    .menu-burger {
+        opacity: 0;
+        transform: translateX(-320px);
+        transition: all 0.2s linear;
+        border-left: none;
+    }
+    .ic-burger-off_display {
+        display: block;
+    }
+    .menu-burger-mobile {
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 100;
+        box-shadow: 16px 0 52px 0 $boxShadow;
+        &::before {
+            content: "";
+            position: fixed;
+            left: 320px;
+            width: 100vw;
+            height: 100vh;
+            background-color: $blockColor;
+            opacity: 0.9605;
+        }
+    }
+    .menu-section__nav:active::before, .menu-section__nav:hover::before {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}

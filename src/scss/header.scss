@@ -1,0 +1,269 @@
+$borderColor: #D9FFF5;
+$background: #F8F8F8;
+$beforeTitle: #41F6D7;
+$logoFill: #6B7B84;
+$blockColor: #FFFFFF;
+$afterButton: #EAEAEA;
+
+@font-face {
+    font-family: TT Lakes;
+    src: url(../fonts/TTLakes-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: TT Lakes;
+    src: url(../fonts/TTLakes-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: TT Lakes;
+    src: url(../fonts/TTLakes-Regular.ttf);
+    font-weight: 400;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: TT Lakes;
+    font-weight: 500;
+}
+.container {
+    overflow: hidden;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-right: solid 1px $borderColor;
+    
+}
+/* HEADER */
+.header {
+    max-width: 1120px;
+    margin-left: 320px;
+    padding: 32px;
+    padding-bottom: 0;
+    background-color: $background;
+}
+.header__content {
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    letter-spacing: -0.6px;
+    font-size: 28px;
+    line-height: 40px;
+    font-family: TT Lakes;
+    font-weight: 700;
+    white-space: nowrap;
+    position: relative;
+    &:before {
+        content: "";
+        width: 3px;
+        height: 40px;
+        background-color: $beforeTitle;
+        position: absolute;
+        border-radius: 2px;
+        top: 0;
+        left: -32px;
+    }
+}
+.header__buttons {
+    display: flex;
+    white-space: nowrap;
+}
+.header__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.15s linear;
+    cursor: pointer;
+    &:first-child {
+        margin-right: 32px;
+    }
+    &:hover {
+        color: #FF3E79;
+    }
+}
+.text {
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+.ic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.ic_repair {
+    background-image: url(../img/header/repair.svg);
+}
+.ic_checkstatus {
+    background-image: url(../img/header/checkstatus.svg);
+}
+.ic-burger {
+    background-image: url(../img/header/burger.svg);
+}
+.logo {
+    width: 96.55px;
+    height: 50.81px;
+    fill: $logoFill;
+    background-image: url(../img/header/logo.svg)
+}
+.ic-call {
+    background-image: url(../img/header/call.svg);
+}
+.ic-chat {
+    background-image: url(../img/header/chat.svg);
+}
+.ic-profile {
+    background-image: url(../img/header/profile.svg);
+}
+.ic-repair {
+    background-image: url(../img/header/repair.svg);
+}
+.ic-checkstatus {
+    background-image: url(../img/header/checkstatus.svg);
+}
+.menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* <768px */
+@media (max-width: 767px) {
+    .header {
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin-top: 0;
+    }
+    .header__content {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .menu__buttons {
+        position: relative;
+        padding-top: 24px;
+        padding-right: 16px;
+        padding-left: 16px;
+        display: flex;
+        justify-content: space-between;
+        background: $blockColor;
+        padding-bottom: 17px;
+        border-bottom: $borderColor solid 1px;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 32px;
+            top: 28px;
+            left: 58.12%;
+            background: $afterButton;
+        }
+    }
+    .menu__button-left {
+        display: flex;
+        align-items: center;
+    }
+    .menu__button-middle {
+        display: none;
+    }
+    .menu__button-right {
+        display: flex;
+    }
+    .title {
+        margin: 0 16px;
+        margin-top: 24px;
+        &::before {
+            left: -16px;
+            border-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+    }
+    .ic_right {
+        margin-right: 16px;
+    }
+}
+/* 768-1120 */
+@media only screen and (min-width: 768px) and (max-width: 1119px) {
+    .header {
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin-top: 0;
+    }
+    .header__content {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .menu__buttons {
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+        background: $blockColor;
+        padding-bottom: 17px;
+        border-bottom: $borderColor solid 1px;
+        
+    }
+    .logo {
+        margin-left: 24px;
+    }
+    .menu__buttons-group {
+        display: flex;
+    }
+    .menu__button-left {
+        align-items: center;
+        display: flex;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 32px;
+            top: 4px;
+            left: 60px;
+            background: $afterButton;
+        }
+    }
+    .menu__button-middle {
+        display: flex;
+        margin-right: 42px;
+    }
+    .menu__button-right {
+        position: relative;
+        display: flex;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 32px;
+            top: 4px;
+            left: -20px;
+            background: $afterButton;
+        }
+    }
+    .title {
+        margin: 0 24px;
+        margin-top: 24px;
+        &::before {
+            left: -24px;
+            border-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+    }
+    
+    .ic_right {
+        margin-right: 16px;
+    }
+}

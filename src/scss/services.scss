@@ -1,0 +1,213 @@
+$swiperTheme: #6b6b6b;
+$background: #F8F8F8;
+$footerColor: #7E7E82;
+$borderColor: #D9FFF5;
+$blockColor: #FFFFFF;
+$afterButton: #EAEAEA;
+$navColor: #1B1C21;
+
+.swiper-pagination-bullet-active {
+    background: $swiperTheme;
+}
+.services {
+    border-top: solid 1px $borderColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    background: $background;
+    margin-left: 320px;
+}
+.service__сontainer {
+    position: relative;
+    padding-top: 24px;
+}
+.swiper-pagination {
+    bottom: 30px !important;
+    display: none;
+}
+.content-title {
+    font-family: TT Lakes;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    font-style: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $footerColor;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg,$background 30%, $blockColor 100%);
+}
+.service__slide > div:first-child {
+    transition: transform .15s linear;
+    margin-left: 16px;
+}
+.service__slide > div:last-child {
+    margin-right: 16px;
+}
+.ic {
+    width: 40px;
+    height: 40px;
+}
+.ic-go {
+    background-image: url(../img/brands/go.svg);
+    border-radius: 50%;
+    transition: background-color 0.15s linear;
+}
+.bitmap-lenovo {
+    background-image: url(../img/brands/bitmap-lenovo.svg);
+    width: 108px;
+    height: 32px;
+}
+.bitmap-samsung {
+    background-image: url(../img/brands/bitmap-samsung.svg);
+    width: 116px;
+    height: 38.52px;
+}
+.bitmap-apple {
+    background-image: url(../img/brands/bitmap-apple.svg);
+    width: 44px;
+    height: 44px;
+}
+.bitmap-sonic {
+    background-image: url(../img/brands/bitmap-sonic.svg);
+    width: 128px;
+    height: 21px;
+}
+.bitmap-bosch {
+    background-image: url(../img/brands/bitmap-bosch.svg);
+    width: 128px;
+    height: 28.6px;
+}
+.bitmap-hp {
+    background-image: url(../img/brands/bitmap-hp.svg);
+    width: 52px;
+    height: 52px;
+}
+.bitmap-acer {
+    background-image: url(../img/brands/bitmap-acer.svg);
+    width: 94px;
+    height: 24px;
+}
+.bitmap-sony {
+    background-image: url(../img/brands/bitmap-sony.svg);
+    width: 128px;
+    height: 25.6px;
+}
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px !important;
+    overflow: hidden;
+}
+.swiper-wrapper_overflow {
+    height: 100% !important;
+    overflow: visible;
+}
+
+.service__slide {
+    margin-left: 32px;
+    margin-bottom: 16px;
+    width: 240px !important;
+    height: 72px !important;
+    border: solid 1px $afterButton;
+    border-radius: 6px;
+    background-color: $blockColor;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    &:hover .ic-go {
+        background-color: pink;
+    }
+    
+}
+.more-button {
+    position: absolute;
+    width: 134px;
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+    color: $navColor;
+    cursor: pointer;
+    margin-bottom: 34px;
+    border: none;
+    background-color: inherit;
+}
+.arr {
+    padding-left: 20px;
+    font-family: TT Lakes;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-left: 32px;
+    position: relative;
+    white-space: nowrap;
+    &:before {
+        top: 0;
+        left: -10px;
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/brands/arr.svg);
+    }
+    &.more-title:before {
+        transform: rotate(180deg)
+    }
+}
+@media (max-width: 767px) {
+    .content-title {
+        padding-left: 16px;
+    }
+    .swiper-pagination {
+        display: block;
+    }
+    .services {
+        position: relative;
+        overflow: hidden;
+        margin-left: 0;
+    }
+    .swiper-wrapper {
+        padding-bottom: 66px;
+        height: 100% !important;
+        margin-left: 16px;
+        flex-wrap: nowrap;
+        overflow: visible;
+    }
+    .service__slide {
+        margin: 0;
+        margin-right: 16px;
+    }
+    .service__сontainer {
+        position: static;
+        width: 256px !important;
+        padding: 0;
+        padding-top: 16px;
+    }
+    .more-button {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1119px) {
+    .service__slide {
+        width: 224px !important;
+        margin-left: 16px;
+    }
+    .content-title {
+        padding-left: 24px;
+    }
+    .services {
+        margin-left: 0;
+    }
+
+}
+@media only screen and (min-width: 1120px) and (max-width: 1439px) {
+    .service__slide {
+        width: 224px !important;
+        margin-left: 24px;
+    }
+}

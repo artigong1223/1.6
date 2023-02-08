@@ -1,0 +1,204 @@
+$blockColor: #FFFFFF;
+$borderColor: #D9FFF5;
+$boxShadow: #0E1850;
+$navColor: #1B1C21;
+$beforeTitle: #41F6D7;
+$afterButton: #EAEAEA;
+$footerColor: #7E7E82;
+$aColor: #FF3E79;
+$placeholderColor: #B5B6BC;
+
+.modal-feedback {
+    transform: translateX(440px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $blockColor;
+    height: 100vh;
+    width: 440px;
+    z-index: 1000;
+    border-left: 1px solid $borderColor;
+    visibility: hidden;
+    transition: all 0.25s linear;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        margin-right: 440px;
+        background-color: $blockColor;
+        opacity: 96.5%;
+    }
+}
+.modal-call {
+    transform: translateX(440px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $blockColor;
+    height: 100vh;
+    width: 440px;
+    z-index: 1000;
+    border-left: 1px solid $borderColor;
+    visibility: hidden;
+    transition: all 0.25s linear;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        margin-right: 440px;
+        background-color: $blockColor;
+        opacity: 96.5%;
+    }
+}
+.body-scroll-off {
+    max-height: 100vh;
+    overflow: hidden;
+}
+.modal-on {
+    box-shadow: 16px 0 100px 10px $boxShadow;
+    transform: translateX(0);
+    visibility: visible;
+}
+.modal-title {
+    margin-top: 40px;
+    position: relative;
+    margin-left: 31px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $navColor;
+    &::before {
+        content: "";
+        width: 3px;
+        height: 40px;
+        position: absolute;
+        top: -5px;
+        left: -32px;
+        background-color: $beforeTitle;
+        border-radius: 2px;
+    }
+}
+.modal-feedback__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+    margin-top: 24px;
+}
+.modal-feedback__input {
+    border-radius: 8px;
+    border: $afterButton 1px solid;
+    width: 376px;
+    height: 48px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    &:nth-child(4) {
+        padding-bottom: 82px;
+        padding-top: 24px;
+    }
+    &::placeholder {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $placeholderColor;
+    }
+}
+.modal-feedback__subtitle {
+    color: $footerColor;
+    width: 376px;
+    height: 48px;
+    margin-left: 32px;
+    line-height: 16px;
+}
+.modal-href {
+    color: $aColor;
+    cursor: pointer;
+}
+.modal-button {
+    position: absolute;
+    padding-right: 30px;
+    max-width: 130px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: $aColor;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    color: $blockColor;
+    padding-left: 20px;
+    bottom: -120px;
+    right: 32px;
+    &::after {
+        position: absolute;
+        content: "";
+        background: url(../img/price/dropdown.svg) no-repeat;
+        width: 8px;
+        height: 10px;
+        right: 14px;
+        top: 11.5px;
+    }
+}
+.modal-off {
+    position: absolute;
+    background: url(../img/menu-burger/burger-off.svg);
+    left: -64px;
+    top: 34px;
+}
+
+@media (max-width: 767px) {
+    .modal-call {
+        width: 100vw;
+        &::before {
+            content: none;
+        }
+    }
+    .modal-feedback {
+        width: 100vw;
+        &::before {
+            content: none;
+        }
+    }
+    .modal-title {
+        margin-top: 104px;
+        margin-left: 16px;
+        &::before {
+            left: -16px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+    .modal-feedback__form {
+        margin-left: 16px;
+    }
+    .modal-feedback__input {
+        width: calc(100vw - 32px);
+        padding-left: 16px;
+    }
+    .modal-feedback__subtitle {
+        width: calc(100vw - 32px);
+        height: 64px;
+        margin-left: 16px;
+    }
+    .modal-button {
+        position: absolute;
+        right: 16px;
+        bottom: -130px;
+    }
+    .modal-off {
+        left: 16px;
+        top: 34px;
+    }
+}

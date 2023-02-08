@@ -1,0 +1,102 @@
+
+$blockColor: #FFFFFF;
+$background: #F8F8F8;
+$borderColor: #D9FFF5;
+
+.works {
+    position: relative;
+    border-top: solid 1px $borderColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    background: $background;
+    margin-left: 320px;
+    min-width: 0;
+    flex-wrap: wrap;
+}
+
+.works__slide {
+    width: 240px !important;
+    height: 160px !important;
+    background-color: $blockColor;
+    border-radius: 6px;
+    margin-left: 32px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    & > div:first-child {
+        transition: transform .15s linear;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+    }
+    & > div:last-child {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+    &:hover .ic-go {
+        background-color: pink;
+    }
+}
+.swiper-wrapper {
+    flex-wrap: wrap;
+    height: 160px !important;
+    overflow: hidden;
+}
+.works__сontainer {
+    position: relative;
+    padding-top: 24px;
+}
+.swiper-wrapper_overflow {
+    height: 100% !important;
+    overflow: visible;
+}
+
+@media (max-width: 767px) {
+    
+    .swiper-pagination {
+        display: block;
+    }
+    .works {
+        position: relative;
+        overflow: hidden;
+        margin-left: 0;
+    }
+    .swiper-wrapper {
+        padding-bottom: 66px;
+        height: 100% !important;
+        margin-left: 16px;
+        flex-wrap: nowrap;
+        overflow: visible;
+    }
+    .works__slide {
+        margin: 0;
+        margin-right: 16px;
+    }
+    .works__сontainer {
+        position: static;
+        width: 256px !important;
+        padding: 0;
+        padding-top: 16px;
+    }
+    .more-button {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1119px) {
+    .works {
+        margin-left: 0;
+    }
+    .works__slide {
+        width: 224px !important;
+        margin-left: 16px;
+    }
+}
+@media only screen and (min-width: 1120px) and (max-width: 1439px) {
+    .works__slide {
+        width: 224px !important;
+        margin-left: 24px;
+    }
+}
