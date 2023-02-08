@@ -250,10 +250,10 @@ body {
   .footer {
     margin-left: 0;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding: 0;
     padding-top: 16px;
-    margin-bottom: 20px; }
+    padding-bottom: 20px; }
   .footer__element {
     width: 312px;
     height: 32px;
