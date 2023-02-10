@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="#">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <title>Document</title>
 <link href="style.css" rel="stylesheet"></head>
 <body>
@@ -13,41 +12,45 @@
 <div class="container">
 
     
-    <div class="menu-burger">
-        <div class="menu-burger__header">
-            <div class="menu-burger__left-ic">
-                <div class="ic-burger-off ic-burger-off_display ic ic_right"></div>
-                <div class="logo"></div>
+    <div class="container-menu-burger">
+
+        <div class="menu-burger">
+            <div class="menu-burger__header">
+                <div class="menu-burger__left-ic">
+                    <div class="ic-burger-off ic-burger-off_display ic ic_right"></div>
+                    <div class="logo"></div>
+                </div>
+                <div class="menu-burger__right-ic">
+                    <div class="ic-search ic"></div>
+                </div>
             </div>
-            <div class="menu-burger__right-ic">
-                <div class="ic-search ic"></div>
-            </div>
-        </div>
-        <ul class="menu-section">
-            <li class="menu-section__nav">Ремонт техники</li>
-            <li class="menu-section__nav">Услуги и сервисы</li>
-            <li class="menu-section__nav">Корпоративным клиентам</li>
-            <li class="menu-section__nav">Партнерам</li>
-            <li class="menu-section__nav">Производителям</li>
-            <li class="menu-section__nav">Наши сервисные центры</li>
-            <li class="menu-section__nav">Контакты</li>
-        </ul>
-        <footer class="menu-section__footer">
-            <div class="ic-bar">
-                <div class="ic-call ic ic_right"></div>
-                <div class="ic-chat ic ic_right"></div>
-                <div class="ic-profile ic"></div>
-            </div>
-            <div class="adress">
-                <div class="adress-mail"><a class="adress-link" href="mailto:mail@cps.com">mail@cps.com</a></div>
-                <div class="adress-number"><a class="adress-link" href="tel:88008908900">8 800 890 8900</a></div>
-            </div>
-            <ul class="footer-languages">
-                <li class="footer-lang">ru</li>
-                <li class="footer-lang">en</li>
-                <li class="footer-lang">ch</li>
+            <ul class="menu-section">
+                <li class="menu-section__nav">Ремонт техники</li>
+                <li class="menu-section__nav">Услуги и сервисы</li>
+                <li class="menu-section__nav">Корпоративным клиентам</li>
+                <li class="menu-section__nav">Партнерам</li>
+                <li class="menu-section__nav">Производителям</li>
+                <li class="menu-section__nav">Наши сервисные центры</li>
+                <li class="menu-section__nav">Контакты</li>
             </ul>
-        </footer>
+            <footer class="menu-section__footer">
+                <div class="ic-bar">
+                    <div class="ic-call ic ic_right"></div>
+                    <div class="ic-chat ic ic_right"></div>
+                    <div class="ic-profile ic"></div>
+                </div>
+                <div class="adress">
+                    <div class="adress-mail"><a class="adress-link" href="mailto:mail@cps.com">mail@cps.com</a></div>
+                    <div class="adress-number"><a class="adress-link" href="tel:88008908900">8 800 890 8900</a></div>
+                </div>
+                <ul class="footer-languages">
+                    <li class="footer-lang">ru</li>
+                    <li class="footer-lang">en</li>
+                    <li class="footer-lang">ch</li>
+                </ul>
+            </footer>
+        </div>
+        <div class="menu-burger-off"></div>
     </div>
     
     <header class="header">
@@ -310,32 +313,36 @@
     </footer>
     
     
-    <div class="modal-call">
-        <div class="modal-off ic"></div>
-        <div class="modal-title">Заказать звонок</div>
-        <form class="modal-feedback__form" action="">
-            <input class="modal-feedback__input" type="tel" placeholder="Телефон">
-        <button class="modal-button">Отправить</button>
-        </form>
-        <div class="modal-feedback__subtitle">Нажимая “отправить”, вы даете согласие на <a class="modal-href">обработку персональных данных</a> и соглашаетесь с нашей <a class="modal-href">политикой конфиденциальности</a></div>
+    <div class="container-modal-call">
+        <div class="modal-call">
+            <div class="modal-off ic"></div>
+            <div class="modal-title">Заказать звонок</div>
+            <form class="modal-feedback__form" action="">
+                <input class="modal-feedback__input" type="tel" placeholder="Телефон">
+            <button onclick="event.preventDefault()" class="modal-button">Отправить</button>
+            </form>
+            <div class="modal-feedback__subtitle">Нажимая “отправить”, вы даете согласие на <a class="modal-href">обработку персональных данных</a> и соглашаетесь с нашей <a class="modal-href">политикой конфиденциальности</a></div>
+        </div>
+        <div class="modal-call-off"></div>
     </div>
     
-    <div class="modal-feedback">
-        <div class="modal-off ic"></div>
-        <div class="modal-title">Обратная связь</div>
-        <form class="modal-feedback__form" action="">
-            <input class="modal-feedback__input" type="text" placeholder="Имя">
-            <input class="modal-feedback__input" type="tel" placeholder="Телефон">
-            <input class="modal-feedback__input" type="text" placeholder="Электронная почта">
-            <input class="modal-feedback__input" type="text" placeholder="Сообщение">
-            <button class="modal-button">Отправить</button>
-        </form>
-        <div class="modal-feedback__subtitle">Нажимая “отправить”, вы даете согласие на <a class="modal-href">обработку персональных данных</a> и соглашаетесь с нашей <a class="modal-href">политикой конфиденциальности</a></div>
+    <div class="container-modal-call">
+        <div class="modal-feedback">
+            <div class="modal-off ic"></div>
+            <div class="modal-title">Обратная связь</div>
+            <form class="modal-feedback__form" action="">
+                <input class="modal-feedback__input" type="text" placeholder="Имя" required>
+                <input class="modal-feedback__input" type="tel" placeholder="Телефон">
+                <input class="modal-feedback__input" type="email" placeholder="Электронная почта">
+                <input class="modal-feedback__input" type="text" placeholder="Сообщение">
+                <button class="modal-button">Отправить</button>
+            </form>
+            <div class="modal-feedback__subtitle">Нажимая “отправить”, вы даете согласие на <a class="modal-href">обработку персональных данных</a> и соглашаетесь с нашей <a class="modal-href">политикой конфиденциальности</a></div>
+        </div>
+        <div class="modal-chat-off"></div>
     </div>
     
-
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
