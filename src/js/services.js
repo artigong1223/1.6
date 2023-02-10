@@ -1,16 +1,4 @@
-new Swiper('.image-slider', {
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    breakpoints: {
-        768: {
-            simulateTouch: false,
-            grabCursor: false,
-            touchRatio: 0
-        }
-    }
-    });
+
 const swiperWrapper = document.querySelectorAll('.swiper-wrapper')
 const arrow = document.querySelectorAll('.arr')
 const moreButton = document.querySelectorAll('.more-button')
