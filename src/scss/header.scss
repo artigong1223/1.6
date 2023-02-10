@@ -115,18 +115,33 @@ body {
 }
 .ic-call {
     background-image: url(../img/header/call.svg);
+    &:hover {
+        opacity: .7;
+    }
 }
 .ic-chat {
     background-image: url(../img/header/chat.svg);
+    &:hover {
+        opacity: .7;
+    }
 }
 .ic-profile {
     background-image: url(../img/header/profile.svg);
+    &:hover {
+        opacity: .7;
+    }
 }
 .ic-repair {
     background-image: url(../img/header/repair.svg);
+    &:hover {
+        opacity: .7;
+    }
 }
 .ic-checkstatus {
     background-image: url(../img/header/checkstatus.svg);
+    &:hover {
+        opacity: .7;
+    }
 }
 .menu {
     display: none;
