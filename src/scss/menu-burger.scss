@@ -4,7 +4,7 @@ $logoFill: #6B7B84;
 $navColor: #1B1C21;
 $footerColor: #7E7E82;
 $beforeTitle: #41F6D7;
-$boxShadow: #0E1850;
+$boxShadow: #0E185033;
 
 
 .menu-burger {
@@ -145,9 +145,12 @@ $boxShadow: #0E1850;
 /* <768px */
 @media (max-width: 767px) {
     .menu-burger {
-        opacity: 0;
+        max-width: 360px;
+        visibility: hidden;
         transform: translateX(-320px);
         transition: all 0.2s linear;
+        z-index: 1000;
+        box-shadow: 16px 0 52px 0 $boxShadow;
     }
     .footer-languages {
         margin-top: 8px;
@@ -165,10 +168,20 @@ $boxShadow: #0E1850;
     .ic-burger-off_display {
         display: block;
     }
-    .menu-burger-mobile {
-        opacity: 1;
-        transform: translateX(0);
+    .menu-burger-off {
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: $blockColor;
+        opacity: 96.5%;
+        height: 100vh;
+        width: 100vw;
         z-index: 100;
+    }
+    .menu-burger-mobile {
+        visibility: visible;
+        transform: translateX(0);
         width: 100%;
     }
 
@@ -176,28 +189,31 @@ $boxShadow: #0E1850;
 /* 768-1120 */
 @media (min-width: 768px) and (max-width: 1119px) {
     .menu-burger {
-        opacity: 0;
+        visibility: hidden;
         transform: translateX(-320px);
         transition: all 0.2s linear;
         border-left: none;
+        z-index: 1000;
+        box-shadow: 16px 0 52px 0 $boxShadow;
+
     }
     .ic-burger-off_display {
         display: block;
     }
-    .menu-burger-mobile {
-        opacity: 1;
-        transform: translateX(0);
+    .menu-burger-off {
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: $blockColor;
+        opacity: 96.5%;
+        height: 100vh;
+        width: 100vw;
         z-index: 100;
-        box-shadow: 16px 0 52px 0 $boxShadow;
-        &::before {
-            content: "";
-            position: fixed;
-            left: 320px;
-            width: 100vw;
-            height: 100vh;
-            background-color: $blockColor;
-            opacity: 0.9605;
-        }
+    }
+    .menu-burger-mobile {
+        visibility: visible;
+        transform: translateX(0);
     }
     .menu-section__nav:active::before, .menu-section__nav:hover::before {
         border-bottom-left-radius: 0;
